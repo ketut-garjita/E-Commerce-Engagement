@@ -273,13 +273,13 @@ Ensure you have the following installed:
 
 #### **STEP 2: Train Model (optional)**
 
-   If you want to train model, follow [train-model.md]()
+   If you want to train model, follow [train-model.md](https://github.com/ketut-garjita/E-Commerce-Engagement/blob/main/train-model.md)
 
-   - Model result for local prediction: [models/e-commerce-engagement-model](https://github.com/ketut-garjita/E-Commerce-Engagement/blob/main/models/e-commerce-engagement-model.keras)
+   - Tokenizer: [models/tokenizer.pkl](https://github.com/ketut-garjita/E-Commerce-Engagement/tree/main/models) directory
+
+   - Model result for local prediction: [models/e-commerce-engagement-model](https://github.com/ketut-garjita/E-Commerce-Engagement/tree/main/models) directory
 
    - Final model for prediction on docker: [saved_model/1/](https://github.com/ketut-garjita/E-Commerce-Engagement/tree/main/saved_model/1) directory
-
-   - Tokenizer: [models/tokenizer.pkl](https://github.com/ketut-garjita/E-Commerce-Engagement/blob/main/models/tokenizer.pkl)
 
      
 #### **STEP 3: Predict the Model**
