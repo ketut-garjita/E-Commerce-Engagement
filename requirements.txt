@@ -1,0 +1,7 @@
+pandas
+numpy
+protobuf
+typing-extensions
+pickledb
+streamlit
+tensorflow==2.18.0

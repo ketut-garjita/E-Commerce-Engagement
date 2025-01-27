@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tf-serving-engagement-model
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tf-serving-engagement-model
+  template:
+    metadata:
+      labels:
+        app: tf-serving-engagement-model
+    spec:
+      containers:
+        - name: tf-serving-engagement-model
+          image: <AWS Account ID>.dkr.ecr.<Region>.amazonaws.com/e-commerce-engagement-streamlit-api:latest
+          ports:
+            - containerPort: 8501
+      imagePullSecrets:
+        - name: ecr-secret

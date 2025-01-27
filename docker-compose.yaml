@@ -1,0 +1,22 @@
+services:
+  tf-serving:
+    image: tensorflow/serving:latest
+    container_name: tf-serving
+    ports:
+      - "8501:8501"  # Expose TensorFlow Serving port
+    environment:
+      - MODEL_NAME=saved_model
+    volumes:
+      - ./saved_model:/models/saved_model  # Mount local model directory to container
+
+  streamlit-api:
+    build:
+      context: .  # Build the image from the current directory
+      dockerfile: Dockerfile
+    container_name: streamlit-api
+    ports:
+      - "8502:8502"  # Expose Streamlit API port
+    depends_on:
+      - tf-serving  # Ensure TensorFlow Serving starts before this service
+    volumes:
+      - ./models:/app/models  # Mount tokenizer.pkl into the container
