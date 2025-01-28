@@ -204,7 +204,7 @@ _PS: Training the model will take approximately 1 hour on a Linux Virtual Machin
 
    ```
    cd E-Commerce-Engagement
-   pip install requirements.txt  
+   pip install -r requirements.txt  
    ```
 
    **OPTION 1 : Using Pandas Tool and Dataset on Local File System**
