@@ -285,7 +285,16 @@ Ensure you have the following installed:
 #### **STEP 3: Predict the Model**
 
    **Without Container**
+   
+   - Install Package Dependencies
 
+     Install under venv or conda environment.
+
+     ```
+     cd E-Commerce-Engagement
+     pip install -r requirements.txt
+     ```
+     
    - Run the Streamlit API
 
       ```
