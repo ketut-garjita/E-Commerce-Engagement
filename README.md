@@ -275,6 +275,8 @@ Ensure you have the following installed:
 
    If you want to train model, follow [train-model.md](https://github.com/ketut-garjita/E-Commerce-Engagement/blob/main/train-model.md)
 
+   **Outputs:**
+   
    - Tokenizer: [models/tokenizer.pkl](https://github.com/ketut-garjita/E-Commerce-Engagement/tree/main/models) directory
 
    - Model result for local prediction: [models/e-commerce-engagement-model](https://github.com/ketut-garjita/E-Commerce-Engagement/tree/main/models) directory
@@ -293,6 +295,10 @@ Ensure you have the following installed:
      ```
      cd E-Commerce-Engagement
      pip install -r requirements.txt
+     ```
+     After tensorflow library installed, make sure you can import and no error:
+     ```
+     python -c "import tensorflow as tf; print(tf.__version__)"
      ```
      
    - Run the Streamlit API
@@ -323,20 +329,21 @@ Ensure you have the following installed:
     - Docker Containers:
       - tf-serving
       - streamlit-api
-    - Once docker images and containers built, we can start or stop containers using commands:
-      - docker start f-serving streamlit-api
-      - docker stop f-serving streamlit-api
-
+ 
   - Build docker images and run containers
-
      ```
      docker compose up --build          
      ```
+     
   - Review Containers
     ```
     docker ps
-    ```    
-
+    ```
+            
+  - Once docker containers built, you can stop or start containers using commands (optional):
+      - docker stop f-serving streamlit-api
+      - docker start f-serving streamlit-api
+        
   - Test the Model Prediction
 
     [http://localhost:8501](http://localhost:8501)
@@ -532,4 +539,3 @@ Tools: HDFS, Pandas, Pyspark, Numpy, TensorFlow Serving, Streamlit API, Docker, 
 Dataset: [Indonesia's Top E-Commerce Tweets](https://www.kaggle.com/datasets/robertvici/indonesia-top-ecommerce-unicorn-tweets)
 
 ---
-# E-Commerce-Engagement
